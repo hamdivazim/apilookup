@@ -32,7 +32,7 @@ For example, say that an API (named api.a.com/users/123456789) contained this da
     `
         import apilookup
 
-        lookup = apilookup.Lookup(default="https://a.com/users/bob/pfp.png")
+        lookup = apilookup.Lookup(default="api.a.com/users/123456789")
 
         id = lookup.get_data()["id"]
     `
