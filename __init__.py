@@ -63,11 +63,3 @@ class Lookup: # Base class used for API lookups.
         parse_json = json.loads(data)
 
         return parse_json
-
-
-if __name__ == "__main__":
-
-    should_raise_error = Lookup()
-
-    username = should_raise_error.get_data()["username"]
-    join = should_raise_error.get_data()["history"]["joined"]
