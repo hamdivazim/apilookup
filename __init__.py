@@ -44,6 +44,7 @@ For example, say that an API (named api.a.com/users/123456789) contained this da
 
 import json
 import requests
+import _exceptions
 
 class Lookup: # Base class used for API lookups.
     def __init__(self, default="nil"):
@@ -55,7 +56,7 @@ class Lookup: # Base class used for API lookups.
             if not self.default == "nil":
                 res_url = self.default
             else:
-                raise _exceptions.NoURLException
+                raise _exceptions.NoURLException("No URL provided.")
 
         response_API = requests.get(res_url)
         data = response_API.text
@@ -65,10 +66,8 @@ class Lookup: # Base class used for API lookups.
 
 
 if __name__ == "__main__":
-    # Test script
-    lookup = Lookup(default="https://api.scratch.mit.edu/users/codingboy_CW")
 
-    username = lookup.get_data()["username"]
-    join = lookup.get_data()["history"]["joined"]
+    should_raise_error = Lookup()
 
-    print(username, join)
+    username = should_raise_error.get_data()["username"]
+    join = should_raise_error.get_data()["history"]["joined"]
