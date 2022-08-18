@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import codecs
 import os
 
-VERSION = '1.0.0'
+VERSION = '1.0.3'
 DESCRIPTION = 'An easy way to lookup APIs.'
 LONG_DESCRIPTION = 'A package that makes API requests much easier.'
 
@@ -18,7 +18,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
-    install_requires=['requests', 'json'],
+    install_requires=['requests'],
     keywords=['python', 'api', 'apicalls', 'requests', 'json', 'sockets'],
     classifiers=[
         "Development Status :: 1 - Planning",

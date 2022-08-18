@@ -43,7 +43,7 @@ For example, say that an API (named api.a.com/users/123456789) contained this da
 
 import json
 import requests
-import _exceptions
+from . import _exceptions
 
 class Lookup: # Base class used for API lookups.
     def __init__(self, default="nil"):
