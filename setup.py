@@ -21,7 +21,7 @@ setup(
     install_requires=['requests', 'json'],
     keywords=['python', 'api', 'apicalls', 'requests', 'json', 'sockets'],
     classifiers=[
-        "Development Status :: Released",
+        "Development Status :: 1 - Released",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
