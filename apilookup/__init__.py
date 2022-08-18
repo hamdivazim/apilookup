@@ -28,7 +28,6 @@ For example, say that an API (named api.a.com/users/123456789) contained this da
     and we wanted to get their 'id'.
 
     For this, you would use this code:
-
     `
         import apilookup
 
